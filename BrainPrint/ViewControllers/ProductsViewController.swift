@@ -7,9 +7,17 @@
 //
 
 import UIKit
+class CustomTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var label: UILabel!
+    @IBAction func plus(_ sender: Any) {
+    }
+}
+
 
 class ProductsViewController: UIViewController {
 
+    
     
     let pants =	["pant1", "pant2", "pant3", "pant4", "pant5",  ]
     let pantsImages : [UIImage] = [
@@ -22,9 +30,17 @@ class ProductsViewController: UIViewController {
         
     ]
     @IBOutlet weak var collectionView: UICollectionView!
+    var refresher:UIRefreshControl!
+
+    let bottomContent = ["About", "Address", "Contact", "Info", "Follow us"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.refresher = UIRefreshControl()
+        self.collectionView!.alwaysBounceVertical = true
+        self.refresher.tintColor = UIColor.red
+        self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        self.collectionView!.addSubview(refresher)
         //DarthMaul you can add this also from storyboard, try find how.
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -32,6 +48,24 @@ class ProductsViewController: UIViewController {
         //var  layout = self.collectionView as! UICollectionViewFlowLayout
         //layout.sectionInset = 	UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 5)
     }
+    
+   
+    
+    @objc func loadData() {
+          stopRefresher()
+    }
+    
+    func stopRefresher() {
+        self.refresher.endRefreshing()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+        return footer
+    }
+    
+    
+    
 }
 
 extension ProductsViewController: UICollectionViewDelegate {
@@ -49,6 +83,7 @@ extension ProductsViewController: UICollectionViewDelegate {
     }
 }
 
+
 extension ProductsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,4 +96,21 @@ extension ProductsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pants.count;
     }
+    
 }
+extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.bottomContent.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tb_cell", for: indexPath) as! CustomTableViewCell
+        cell.label?.text = bottomContent[indexPath.row]
+        //        cell.plus?.setImage(UIImage(named: "plus"), for: .normal)
+        return cell
+}
+
+}
+
+    
+

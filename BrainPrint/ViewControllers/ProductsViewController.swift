@@ -17,7 +17,7 @@ class CustomTableViewCell: UITableViewCell {
 
 class ProductsViewController: UIViewController {
 
-    
+   
     
     let pants =	["pant1", "pant2", "pant3", "pant4", "pant5",  ]
     let pantsImages : [UIImage] = [
@@ -31,8 +31,8 @@ class ProductsViewController: UIViewController {
     ]
     @IBOutlet weak var collectionView: UICollectionView!
     var refresher:UIRefreshControl!
-
     let bottomContent = ["About", "Address", "Contact", "Info", "Follow us"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

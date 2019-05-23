@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0192D05CDC48435241DC6AFB /* Pods_BrainPrintTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D46EC5EB4FEC529FFCF1A4B /* Pods_BrainPrintTests.framework */; };
+		0D5939332296C99F00B13AEA /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5939322296C99F00B13AEA /* InfoView.swift */; };
+		0D5939372296D3CB00B13AEA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5939362296D3CB00B13AEA /* CustomView.xib */; };
 		0DDA96CF228D89660032E43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA96CE228D89660032E43F /* AppDelegate.swift */; };
 		0DDA96D1228D89660032E43F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA96D0228D89660032E43F /* ProductsViewController.swift */; };
 		0DDA96D4228D89660032E43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDA96D2228D89660032E43F /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D5939322296C99F00B13AEA /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		0D5939362296D3CB00B13AEA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		0DDA96CB228D89660032E43F /* BrainPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDA96CE228D89660032E43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DDA96D0228D89660032E43F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5939312296C93D00B13AEA /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				0D5939322296C99F00B13AEA /* InfoView.swift */,
+				0D5939362296D3CB00B13AEA /* CustomView.xib */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		0DDA96C2228D89660032E43F = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 		0DDA96CD228D89660032E43F /* BrainPrint */ = {
 			isa = PBXGroup;
 			children = (
+				0D5939312296C93D00B13AEA /* CustomControls */,
 				2CB361F9228EFED40046B588 /* Cells */,
 				2CB361E1228EFCCA0046B588 /* Models */,
 				2CB361E0228EFCBA0046B588 /* ViewControllers */,
@@ -378,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDA96D9228D89670032E43F /* LaunchScreen.storyboard in Resources */,
+				0D5939372296D3CB00B13AEA /* CustomView.xib in Resources */,
 				2CB361FB228F00340046B588 /* Default-568h@2x.png in Resources */,
 				0DDA96D6228D89670032E43F /* Assets.xcassets in Resources */,
 				0DDA96D4228D89660032E43F /* Main.storyboard in Resources */,
@@ -497,6 +512,7 @@
 				2CB361F4228EFDC30046B588 /* ProgressHandler.swift in Sources */,
 				2CB361E9228EFD380046B588 /* DummyProgress.swift in Sources */,
 				2CB361F8228EFDC30046B588 /* ErrorHandler.swift in Sources */,
+				0D5939332296C99F00B13AEA /* InfoView.swift in Sources */,
 				2CB361EA228EFD380046B588 /* ProgressInView.swift in Sources */,
 				0DDA96CF228D89660032E43F /* AppDelegate.swift in Sources */,
 				2CB361E8228EFD380046B588 /* DefaultProgress.swift in Sources */,

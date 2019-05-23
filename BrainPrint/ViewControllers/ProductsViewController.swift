@@ -11,13 +11,13 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel?
     @IBAction func plus(_ sender: Any) {
-        print("bvpuct arbabik ? ")
+       
     }
 }
 
 
 
-class ProductsViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
+class ProductsViewController: UIViewController {
 
    
     
@@ -70,7 +70,7 @@ class ProductsViewController: UIViewController,UICollectionViewDelegate, UIColle
     
 }
 
-extension ProductsViewController{
+extension ProductsViewController : UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
@@ -86,7 +86,7 @@ extension ProductsViewController{
 }
 
 
-extension ProductsViewController {
+extension ProductsViewController : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for:  indexPath) as! CollectionViewCell

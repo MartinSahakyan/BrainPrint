@@ -9,13 +9,15 @@
 import UIKit
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UILabel?
     @IBAction func plus(_ sender: Any) {
+        print("bvpuct arbabik ? ")
     }
 }
 
 
-class ProductsViewController: UIViewController {
+
+class ProductsViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
 
    
     
@@ -68,7 +70,7 @@ class ProductsViewController: UIViewController {
     
 }
 
-extension ProductsViewController: UICollectionViewDelegate {
+extension ProductsViewController{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
@@ -84,7 +86,7 @@ extension ProductsViewController: UICollectionViewDelegate {
 }
 
 
-extension ProductsViewController: UICollectionViewDataSource {
+extension ProductsViewController {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for:  indexPath) as! CollectionViewCell
@@ -111,6 +113,8 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 }
+
+
 
     
 

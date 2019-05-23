@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Brain_Print_App
+@testable import BrainPrint
 
 class Brain_Print_AppTests: XCTestCase {
 

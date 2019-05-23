@@ -95,17 +95,19 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-ms-tAC">
-                                                                <rect key="frame" x="20" y="16" width="198" height="21"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-ms-tAC">
+                                                                <rect key="frame" x="15" y="16" width="44.5" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="44.5" id="nYb-uE-CDe"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <color key="textColor" red="0.96743442359999998" green="0.96743442359999998" blue="0.96743442359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MX-E8-Lma">
-                                                                <rect key="frame" x="325" y="11" width="53" height="30"/>
+                                                                <rect key="frame" x="342" y="11" width="14" height="14"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <state key="normal" title="+">
                                                                     <color key="titleColor" red="0.96743442359999998" green="0.96743442359999998" blue="0.96743442359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -117,15 +119,24 @@
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Bhg-ms-tAC" firstAttribute="leading" secondItem="WMk-dI-PKG" secondAttribute="leadingMargin" id="2AD-Gm-nRf"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="Bhg-ms-tAC" secondAttribute="bottom" constant="5" id="9UQ-iE-viP"/>
+                                                            <constraint firstItem="Bhg-ms-tAC" firstAttribute="top" secondItem="WMk-dI-PKG" secondAttribute="topMargin" constant="5" id="SVm-js-ymj"/>
+                                                        </constraints>
                                                     </tableViewCellContentView>
                                                     <connections>
                                                         <outlet property="label" destination="Bhg-ms-tAC" id="TkO-54-Lbs"/>
-                                                        <outlet property="plus" destination="6MX-E8-Lma" id="zEw-yM-R23"/>
                                                     </connections>
                                                 </tableViewCell>
                                             </prototypes>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="d4X-Cn-aa5"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="YzI-hg-94Z"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <constraints>
                                         <constraint firstItem="g1e-V9-w5w" firstAttribute="top" secondItem="mso-xr-E2f" secondAttribute="top" constant="25" id="2X3-TD-yjg"/>
                                         <constraint firstAttribute="bottom" secondItem="g1e-V9-w5w" secondAttribute="bottom" constant="24" id="5pf-sM-f8q"/>

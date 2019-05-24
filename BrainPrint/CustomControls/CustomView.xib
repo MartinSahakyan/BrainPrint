@@ -16,16 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbJ-61-8ZH">
-                    <rect key="frame" x="0.0" y="44" width="240" height="818"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q74-4s-Qid">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rbJ-61-8ZH" secondAttribute="trailing" id="2Cd-ex-B2d"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rbJ-61-8ZH" secondAttribute="bottom" id="PFp-lE-Jm2"/>
-                <constraint firstItem="rbJ-61-8ZH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="vzd-Ta-gtx"/>
+                <constraint firstItem="Q74-4s-Qid" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2os-6p-JHU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q74-4s-Qid" secondAttribute="trailing" id="aCu-Rt-ScX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Q74-4s-Qid" secondAttribute="bottom" id="hkW-ej-meg"/>
+                <constraint firstItem="Q74-4s-Qid" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="w6l-7I-yXK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="37.681159420289859" y="34.821428571428569"/>

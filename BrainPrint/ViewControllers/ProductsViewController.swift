@@ -11,30 +11,27 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel?
     @IBAction func plus(_ sender: Any) {
-       
+        
     }
 }
 
 
 
 class ProductsViewController: UIViewController {
-
-   
     
-    let pants =	["pant1", "pant2", "pant3", "pant4", "pant5",  ]
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let pants =	["pant1", "pant2", "pant3", "pant4", "pant5"]
     let pantsImages : [UIImage] = [
         UIImage(named: "pant1")!,
         UIImage(named: "pant2")!,
         UIImage(named: "pant3")!,
         UIImage(named: "pant4")!,
         UIImage(named: "pant5")!,
-        
-        
     ]
-    @IBOutlet weak var collectionView: UICollectionView!
+    
     var refresher:UIRefreshControl!
     let bottomContent = ["About", "Address", "Contact", "Info", "Follow us"]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,18 +40,14 @@ class ProductsViewController: UIViewController {
         self.refresher.tintColor = UIColor.red
         self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
         self.collectionView!.addSubview(refresher)
-        //DarthMaul you can add this also from storyboard, try find how.
-        collectionView.dataSource = self
-        collectionView.delegate = self
         
+//        collectionView.register(UINib(nibName: "AppFeedCell", bundle: .main), forCellWithReuseIdentifier: "appFeedCell")
         //var  layout = self.collectionView as! UICollectionViewFlowLayout
         //layout.sectionInset = 	UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 5)
     }
     
-   
-    
     @objc func loadData() {
-          stopRefresher()
+        stopRefresher()
     }
     
     func stopRefresher() {
@@ -62,12 +55,9 @@ class ProductsViewController: UIViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! TableReusableView
         return footer
     }
-    
-    
-    
 }
 
 extension ProductsViewController : UICollectionViewDelegate{
@@ -87,7 +77,6 @@ extension ProductsViewController : UICollectionViewDelegate{
 
 
 extension ProductsViewController : UICollectionViewDataSource{
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for:  indexPath) as! CollectionViewCell
         cell.descriptionLabel.text = pants[indexPath.item]
@@ -98,8 +87,8 @@ extension ProductsViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pants.count;
     }
-    
 }
+
 extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.bottomContent.count
@@ -110,11 +99,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.label?.text = bottomContent[indexPath.row]
         //        cell.plus?.setImage(UIImage(named: "plus"), for: .normal)
         return cell
+    }
 }
 
-}
-
-
-
-    
 

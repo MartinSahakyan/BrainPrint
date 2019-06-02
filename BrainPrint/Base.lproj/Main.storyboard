@@ -66,83 +66,9 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="mso-xr-E2f">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="mso-xr-E2f" customClass="TableReusableView" customModule="BrainPrint" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="251" width="375" height="360"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvt-3g-nw0">
-                                            <rect key="frame" x="149" y="203" width="76" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mopyright" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJy-uu-eJC">
-                                            <rect key="frame" x="149" y="232" width="78" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-V9-w5w">
-                                            <rect key="frame" x="0.0" y="18" width="375" height="311"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tb_cell" rowHeight="53" id="vkO-eF-Ymk" customClass="CustomTableViewCell" customModule="BrainPrint" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="28" width="375" height="53"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vkO-eF-Ymk" id="WMk-dI-PKG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-ms-tAC">
-                                                                <rect key="frame" x="15" y="16" width="44.5" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="44.5" id="nYb-uE-CDe"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                                <color key="textColor" red="0.96743442359999998" green="0.96743442359999998" blue="0.96743442359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MX-E8-Lma">
-                                                                <rect key="frame" x="342" y="11" width="14" height="14"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <state key="normal" title="+">
-                                                                    <color key="titleColor" red="0.96743442359999998" green="0.96743442359999998" blue="0.96743442359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r3l-07-Xt4"/>
-                                                                    <action selector="plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHL-ZW-3MW"/>
-                                                                    <action selector="plus:" destination="vkO-eF-Ymk" eventType="touchUpInside" id="yn7-Dy-HeN"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="Bhg-ms-tAC" firstAttribute="leading" secondItem="WMk-dI-PKG" secondAttribute="leadingMargin" id="2AD-Gm-nRf"/>
-                                                            <constraint firstAttribute="bottomMargin" secondItem="Bhg-ms-tAC" secondAttribute="bottom" constant="5" id="9UQ-iE-viP"/>
-                                                            <constraint firstItem="Bhg-ms-tAC" firstAttribute="top" secondItem="WMk-dI-PKG" secondAttribute="topMargin" constant="5" id="SVm-js-ymj"/>
-                                                        </constraints>
-                                                    </tableViewCellContentView>
-                                                    <connections>
-                                                        <outlet property="label" destination="Bhg-ms-tAC" id="TkO-54-Lbs"/>
-                                                    </connections>
-                                                </tableViewCell>
-                                            </prototypes>
-                                            <connections>
-                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="d4X-Cn-aa5"/>
-                                                <outlet property="delegate" destination="BYZ-38-t0r" id="YzI-hg-94Z"/>
-                                            </connections>
-                                        </tableView>
-                                    </subviews>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <constraints>
-                                        <constraint firstItem="g1e-V9-w5w" firstAttribute="top" secondItem="mso-xr-E2f" secondAttribute="top" constant="25" id="2X3-TD-yjg"/>
-                                        <constraint firstAttribute="bottom" secondItem="g1e-V9-w5w" secondAttribute="bottom" constant="24" id="5pf-sM-f8q"/>
-                                        <constraint firstItem="g1e-V9-w5w" firstAttribute="leading" secondItem="mso-xr-E2f" secondAttribute="leading" id="NSL-Id-U94"/>
-                                        <constraint firstAttribute="trailing" secondItem="g1e-V9-w5w" secondAttribute="trailing" id="oYI-ne-uBt"/>
-                                    </constraints>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Cfv-QN-rlI"/>

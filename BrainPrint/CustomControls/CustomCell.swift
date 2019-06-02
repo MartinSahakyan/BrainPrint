@@ -10,9 +10,18 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
+    @IBOutlet weak var SocialMediaLabels: UILabel!
+    @IBOutlet weak var PlusButtoms: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureUI()
         // Initialization code
+    }
+    
+    private func configureUI() {
+        backgroundColor = .clear
+        SocialMediaLabels.textColor = .white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

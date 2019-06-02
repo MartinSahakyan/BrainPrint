@@ -28,10 +28,7 @@
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="UUh-E7-fe0" secondAttribute="trailing" id="oje-lL-ozr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
-            <connections>
-                <outlet property="tableView" destination="UUh-E7-fe0" id="eEV-od-bLx"/>
-            </connections>
-            <point key="canvasLocation" x="142.75362318840581" y="110.49107142857143"/>
+            <point key="canvasLocation" x="155.79710144927537" y="118.52678571428571"/>
         </collectionReusableView>
     </objects>
 </document>

@@ -11,20 +11,24 @@ import Foundation
 
 class TableReusableView: UICollectionReusableView {
     
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
+    var tableView = UITableView()
     private let bottomContent = ["About", "Address", "Contact", "Info", "Follow us"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureTableView()
+//        configureTableView()
     }
     
-    func configureTableView() {
+    func configureTableView(frame : CGRect) {
+        tableView.frame = frame
+        addSubview(tableView)
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .black
     }
+
 }
 
 extension TableReusableView: UITableViewDelegate, UITableViewDataSource {

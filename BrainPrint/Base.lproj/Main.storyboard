@@ -66,7 +66,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="mso-xr-E2f" customClass="TableReusableView" customModule="BrainPrint" customModuleProvider="target">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="mso-xr-E2f" customClass="FooterView" customModule="BrainPrint" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="251" width="375" height="360"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>

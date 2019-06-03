@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class TableReusableView: UICollectionReusableView {
+class FooterView: UICollectionReusableView {
     
 //    @IBOutlet weak var tableView: UITableView!
     var tableView = UITableView()
@@ -31,7 +31,7 @@ class TableReusableView: UICollectionReusableView {
 
 }
 
-extension TableReusableView: UITableViewDelegate, UITableViewDataSource {
+extension FooterView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bottomContent.count
     }

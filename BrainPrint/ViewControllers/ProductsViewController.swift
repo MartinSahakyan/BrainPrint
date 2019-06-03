@@ -46,6 +46,10 @@ class ProductsViewController: UIViewController {
         //layout.sectionInset = 	UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 5)
     }
     
+    @IBAction func openSettings(_ sender: Any) {
+        performSegue(withIdentifier: "Settings", sender: nil)
+    }
+    
     @objc func loadData() {
         stopRefresher()
     }

@@ -10,6 +10,7 @@
 		0192D05CDC48435241DC6AFB /* Pods_BrainPrintTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D46EC5EB4FEC529FFCF1A4B /* Pods_BrainPrintTests.framework */; };
 		0D150981229FF695003E49FE /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15097F229FF695003E49FE /* CustomCell.swift */; };
 		0D150982229FF695003E49FE /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D150980229FF695003E49FE /* CustomCell.xib */; };
+		0D8BBBEA22B0DCD800FD13DC /* MainPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BBBE922B0DCD800FD13DC /* MainPageCollectionViewCell.swift */; };
 		0DC38C9122A4216500F37D7A /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC38C8F22A4216500F37D7A /* CollectionReusableView.swift */; };
 		0DC38C9222A4216500F37D7A /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC38C9022A4216500F37D7A /* CollectionReusableView.xib */; };
 		0DDA96CF228D89660032E43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA96CE228D89660032E43F /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		0D15097F229FF695003E49FE /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		0D150980229FF695003E49FE /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		0D8BBBE922B0DCD800FD13DC /* MainPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DC38C8F22A4216500F37D7A /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		0DC38C9022A4216500F37D7A /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		0DDA96CB228D89660032E43F /* BrainPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				2CB361DF228EFCB20046B588 /* Managers */,
 				0DDA96CE228D89660032E43F /* AppDelegate.swift */,
 				0DDA96D2228D89660032E43F /* Main.storyboard */,
+				0D8BBBE922B0DCD800FD13DC /* MainPageCollectionViewCell.swift */,
 				0DDA96D5228D89670032E43F /* Assets.xcassets */,
 				0DDA96D7228D89670032E43F /* LaunchScreen.storyboard */,
 				0DDA96DA228D89670032E43F /* Info.plist */,
@@ -521,6 +524,7 @@
 				2CB361E9228EFD380046B588 /* DummyProgress.swift in Sources */,
 				2CB361F8228EFDC30046B588 /* ErrorHandler.swift in Sources */,
 				0D150981229FF695003E49FE /* CustomCell.swift in Sources */,
+				0D8BBBEA22B0DCD800FD13DC /* MainPageCollectionViewCell.swift in Sources */,
 				2CB361EA228EFD380046B588 /* ProgressInView.swift in Sources */,
 				0DDA96CF228D89660032E43F /* AppDelegate.swift in Sources */,
 				2CB361E8228EFD380046B588 /* DefaultProgress.swift in Sources */,

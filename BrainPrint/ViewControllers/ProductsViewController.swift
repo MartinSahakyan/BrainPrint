@@ -40,9 +40,10 @@ class ProductsViewController: UIViewController {
         self.refresher.tintColor = UIColor.red
         self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
         self.collectionView!.addSubview(refresher)
-        MainPageCollectionViewCell.registerClass(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "ImageCollectionViewCell")
 //        collectionView.register(UINib(nibName: "AppFeedCell", bundle: .main), forCellWithReuseIdentifier: "appFeedCell")
         //var  layout = self.collectionView as! UICollectionViewFlowLayout
+    
         //layout.sectionInset = 	UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 5)
     }
     
